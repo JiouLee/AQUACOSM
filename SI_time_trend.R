@@ -21,7 +21,7 @@ head(dat)
 rb<-fields::tim.colors(4) #color table
 plot(Ft~jitter(Day, am=0.1), data=dat, pch=c(19, 1)[dat$TP], col=rb[factor(dat$Salinity)])
 
-legend("topleft", leg=c(c("low TP", "high TP"), paste(levels(factor(dat$Salinity)), "ppt")), pch=c(1, 19, 19, 19, 19, 19), col=c(1, 1, rb))
+legend("topleft", leg=c(c("low TP", "high TP"), paste(levels(factor(dat$Salinity)), "ppt")), pch=c(1, rep(19, 5)), col=c(1, 1, rb))
 
 
 #Creation evolution curve 
@@ -31,4 +31,4 @@ ix<-split(1:nrow(dat1), dat1$Salinity) #divide df according to salinity
 for(i in 1:4) fgam(dat1$Day[ix[[i]]], dat1$Ft[ix[[i]]], rb[i], j)
 }
 
-# Test test test
+
