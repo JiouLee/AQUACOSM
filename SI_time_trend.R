@@ -31,4 +31,3 @@ ix<-split(1:nrow(dat1), dat1$Salinity) #divide df according to salinity
 for(i in 1:4) fgam(dat1$Day[ix[[i]]], dat1$Ft[ix[[i]]], rb[i], j)
 }
 
-# Test test. This is a test
